@@ -1,0 +1,46 @@
+@import '../themes/_themeify.scss';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px    100% = 16px
+  overflow-y: scroll;
+
+  @media screen and (min-width: 900px) {
+    font-size: 75%;
+  }
+
+  @include themeify($themes) {
+    background: themed('--greyLight-1');
+  }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  @include themeify($themes) {
+    background: themed('--greyLight-1');
+  }
+}
+
+.components {
+  width: 75rem;
+  height: 40rem;
+  border-radius: 3rem;
+
+
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 17.6rem 19rem 20.4rem;
+  grid-template-rows: repeat(autofit, min-content);
+  grid-column-gap: 5rem;
+  grid-row-gap: 2.5rem;
+  align-items: center;
+
+  @include themeify($themes) {
+    box-shadow: 0.8rem 0.8rem 1.4rem themed('--greyLight-2'),
+    -0.2rem -0.2rem 1.8rem themed('--white');
+  }
+}

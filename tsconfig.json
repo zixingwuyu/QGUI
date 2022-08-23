@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "declaration": true,
+    "inlineSources": true,
+    // "types": ["webgl2", "offscreencanvas"],
+    "lib": ["ESNext", "DOM","dom", "es5", "es6", "es2015.promise", "es2015", "es2017"],//引入的库 防止报错Map Set等找不到 pnpm install @types/node --save-dev
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ]
+}

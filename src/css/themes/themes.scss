@@ -1,0 +1,16 @@
+//定义theme-map
+$whiteTheme:(
+  themeColor:#E5E5E5,//
+);
+$darkTheme:(
+      themeColor:#272323,
+);
+$grayTheme:(
+      themeColor:#919191,
+
+);
+$themes:(
+  default:$whiteTheme,
+  dark:$darkTheme,
+  commemorate:$grayTheme,
+);

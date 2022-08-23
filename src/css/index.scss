@@ -1,0 +1,17 @@
+@import '../component/zxwy-ui/themes/_themeify.scss';
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home_main {
+  @include themeify($themes) {
+    background-color: themed('themeColor');
+  }
+  width: 100%;
+  height: 100%;
+}
+

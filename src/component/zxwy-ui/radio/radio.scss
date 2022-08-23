@@ -1,0 +1,65 @@
+@import '../themes/_themeify.scss';
+
+/*  RADIO  */
+.radio {
+  @include themeify($themes) {
+    $shadow: 0.3rem 0.3rem 0.6rem themed('--greyLight-2'),
+      -0.2rem -0.2rem 0.5rem themed('--white');
+    $inner-shadow: inset 0.2rem 0.2rem 0.5rem themed('--greyLight-2'),
+      inset -0.2rem -0.2rem 0.5rem themed('--white');
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    input {
+      display: none;
+    }
+
+    &__1,
+    &__2 {
+      & input:checked {
+        & ~ label {
+          box-shadow: $inner-shadow;
+          &::after {
+            background: themed('primary');
+          }
+        }
+      }
+      label {
+        box-shadow: $shadow;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        &:hover {
+          &::after {
+            background: themed('primary');
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1.4rem;
+          height: 1.4rem;
+          background: themed('--greyDark');
+          border-radius: 50%;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}

@@ -1,2 +1,16 @@
-# QGUI
-基础UI库，快速统一网站和软件风格，基于ts和scss，支持多主题更换
+
+## 打包流程 Packaging process
+
+tsc && vite build
+
+
+## 外部依赖 External dependencies 
+
+开发环境依赖：  
+vite,scss,typescript
+
+[详情...](./Tools/doc/lib.md "依赖项描述")  
+
+## 文件结构 File structure
+
+[详情...](./Tools/doc/file.md "文件夹描述")  
