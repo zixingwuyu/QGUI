@@ -10,7 +10,7 @@ html {
   }
 
   @include themeify($themes) {
-    background: themed('--greyLight-1');
+    background: themed('greyLight-1');
   }
 }
 
@@ -21,7 +21,7 @@ html {
   align-items: center;
   font-family: 'Poppins', sans-serif;
   @include themeify($themes) {
-    background: themed('--greyLight-1');
+    background: themed('greyLight-1');
   }
 }
 
@@ -40,7 +40,7 @@ html {
   align-items: center;
 
   @include themeify($themes) {
-    box-shadow: 0.8rem 0.8rem 1.4rem themed('--greyLight-2'),
-    -0.2rem -0.2rem 1.8rem themed('--white');
+    box-shadow: 0.8rem 0.8rem 1.4rem themed('greyLight-2'),
+    -0.2rem -0.2rem 1.8rem themed('white-0');
   }
 }
