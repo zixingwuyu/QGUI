@@ -34,4 +34,3 @@ worker.postMessage(data, [data.buffer])
 // rollup-plugin-web-worker-loader
 
 
-

@@ -1,17 +1,17 @@
 @import '../a_common/common.scss';
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px    100% = 16px
-  overflow-y: scroll;
+//   box-sizing: border-box;
+//   font-size: 62.5%; // 1rem = 10px    100% = 16px
+//   overflow-y: scroll;
 
   @media screen and (min-width: 900px) {
     font-size: 75%;
   }
 
-  @include themeify($themes) {
-    background: themed('greyLight-1');
-  }
+  // @include themeify($themes) {
+  //   background: themed('greyLight-1');
+  // }
 }
 
 .container {
