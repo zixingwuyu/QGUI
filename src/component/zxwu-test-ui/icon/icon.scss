@@ -1,0 +1,49 @@
+@import '../a_common/common.scss';
+
+
+
+
+/*  icon  */
+.icon { 
+  @include themeify($themes) {
+    $shadow: 0.3rem 0.3rem 0.6rem themed('greyLight-2'),
+      -0.2rem -0.2rem 0.5rem themed('white-0');
+    $inner-shadow: inset 0.2rem 0.2rem 0.5rem themed('greyLight-2'),
+      inset -0.2rem -0.2rem 0.5rem themed('white-0');
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    display: flex;
+    justify-content: space-between;
+    &__account, &__home, &__settings {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      cursor: pointer;
+      color: themed('greyDark-0');
+      transition: all .5s ease;
+  
+      &:active {
+        box-shadow: $inner-shadow;
+        color: themed('primary');
+      }
+      &:hover {color: themed('primary');}
+    }
+    
+
+    
+  }
+}

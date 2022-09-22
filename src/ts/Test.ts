@@ -1,1 +1,0 @@
-console.log('src/ts/Test.ts')

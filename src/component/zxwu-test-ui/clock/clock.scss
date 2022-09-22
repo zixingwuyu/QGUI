@@ -1,0 +1,124 @@
+@import '../a_common/common.scss';
+
+/*  clock  */
+.clock {
+  @include themeify($themes) {
+    $shadow: 0.3rem 0.3rem 0.6rem themed('greyLight-2'),
+      -0.2rem -0.2rem 0.5rem themed('white-0');
+    $inner-shadow: inset 0.2rem 0.2rem 0.5rem themed('greyLight-2'),
+      inset -0.2rem -0.2rem 0.5rem themed('white-0');
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    width: 12rem;
+    height: 12rem;
+    justify-self: center;
+    box-shadow: $shadow;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .hand {
+      position: absolute;
+      transform-origin: bottom;
+      bottom: 6rem;
+      border-radius: 0.2rem;
+      z-index: 200;
+    }
+
+    .hours {
+      width: 0.4rem;
+      height: 3.2rem;
+      background: themed('greyLight-3');
+    }
+
+    .minutes {
+      width: 0.4rem;
+      height: 4.6rem;
+      background: themed('greyDark-0');
+    }
+    .seconds {
+      width: 0.2rem;
+      height: 5.2rem;
+      background: themed('primary');
+    }
+    .point {
+      position: absolute;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background: themed('primary');
+      z-index: 300;
+    }
+
+    .marker {
+      width: 95%;
+      height: 95%;
+      border-radius: 50%;
+      position: relative;
+      box-shadow: $inner-shadow;
+
+      &::after {
+        content: '';
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        box-shadow: inset 1px 1px 1px themed('greyLight-2'),
+          inset -1px -1px 1px themed('white-0');
+        border-radius: 50%;
+        top: 20%;
+        left: 20%;
+        filter: blur(1px);
+      }
+
+      &__1,
+      &__2,
+      &__3,
+      &__4 {
+        position: absolute;
+        border-radius: 0.1rem;
+        box-shadow: inset 1px 1px 1px themed('greyLight-2'),
+          inset -1px -1px 1px themed('white-0');
+      }
+
+      &__1,
+      &__2 {
+        width: 0.2rem;
+        height: 0.6rem;
+        left: 5.6rem;
+      }
+
+      &__3,
+      &__4 {
+        width: 0.6rem;
+        height: 0.2rem;
+        top: 5.6rem;
+      }
+
+      &__1 {
+        top: 2%;
+      }
+      &__2 {
+        top: 98%;
+        transform: translateY(-0.6rem);
+      }
+      &__3 {
+        left: 2%;
+      }
+      &__4 {
+        left: 98%;
+        transform: translateX(-0.6rem);
+      }
+    }
+  }
+}

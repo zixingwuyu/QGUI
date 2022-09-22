@@ -1,0 +1,35 @@
+//定义theme-map
+$whiteTheme: (
+  themeColor: #ffffff,
+  //
+  primary-light: #8abdff,
+  primary: #6d5dfc,
+  primary-dark: #5b0eeb,
+  white-0: #ffffff,
+  //   greyLight-1: #e4ebf5,
+  greyLight-1: #e4ebf5,
+  greyLight-2: #c8d0e7,
+  greyLight-3: #bec8e4,
+  greyDark-0: #9baacf,
+);
+$darkTheme: (
+  themeColor: #ffffff,
+  //
+  primary-light: #8abdff,
+  primary: #6d5dfc,
+  primary-dark: #5b0eeb,
+  white-0: #573d3d,
+  //   greyLight-1: #e4ebf5,
+  greyLight-1: #383f49,
+  greyLight-2: #c8d0e7,
+  greyLight-3: #bec8e4,
+  greyDark-0: #9baacf,
+);
+$grayTheme: (
+  themeColor: #919191,
+);
+$themes: (
+  default: $whiteTheme,
+  dark: $darkTheme,
+  commemorate: $grayTheme,
+);
